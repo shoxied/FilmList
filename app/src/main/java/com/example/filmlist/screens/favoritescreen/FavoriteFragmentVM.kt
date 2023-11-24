@@ -1,4 +1,4 @@
-package com.example.filmlist.sreens.favoritescreen
+package com.example.filmlist.screens.favoritescreen
 
 import androidx.lifecycle.ViewModel
 
