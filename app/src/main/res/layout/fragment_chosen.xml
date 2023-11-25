@@ -35,7 +35,7 @@
                 android:id="@+id/film_image"
                 android:layout_width="match_parent"
                 android:layout_height="615dp"
-                app:srcCompat="@drawable/avengers_endgame_poster"
+                app:srcCompat="@drawable/baseline_downloading_24"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -56,8 +56,8 @@
                     android:fontFamily="sans-serif-black"
                     android:gravity="center"
                     android:text="9.0"
-                    android:textColor="#51EC2E"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/vote_count_text"
@@ -177,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:gravity="start"
-                android:text="Фантастика"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="17sp"
                 android:paddingStart="10dp"
@@ -317,7 +317,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:gravity="start"
-                android:text="20th Century Fox, Regency Enterprises, The Linson Company"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="17sp"
                 android:paddingStart="10dp"

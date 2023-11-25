@@ -32,7 +32,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
         holder.item_release_text.text = moviesList[position].release_date
         holder.item_vote_text.text = "${moviesList[position].vote_average}"
         Glide.with(MAINACT).load(IMAGE_BASE_URL + moviesList[position].poster_path)
-            .centerCrop().placeholder(R.drawable.avengers_endgame_poster).into(holder.rv_item_image)
+            .centerCrop().placeholder(R.drawable.baseline_downloading_24).into(holder.rv_item_image)
     }
 
     override fun getItemCount(): Int {

@@ -20,11 +20,9 @@ class RetrofitRepository {
         val call = RetrofitInstance.apiChosen.getChosenMovie(id)
         call.enqueue(object : Callback<ChosenMovieModel> {
             override fun onFailure(call: Call<ChosenMovieModel>?, t: Throwable?) {
-                Log.i("AAAA", "fail")
             }
 
             override fun onResponse(call: Call<ChosenMovieModel>?, response: Response<ChosenMovieModel>?) {
-                Log.i("AAAA", "ok")
                 response?.body()?.let { consumer.accept(it) }
             }
         })
