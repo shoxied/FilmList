@@ -8,21 +8,24 @@ import com.example.filmlist.data.retrofit.RetrofitRepository
 import com.example.filmlist.models.chosenmodel.ChosenMovieModel
 import com.example.filmlist.models.startmodel.MovieItemModel
 import com.example.filmlist.models.startmodel.MoviesModel
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import retrofit2.Call
 import retrofit2.Response
+import java.util.function.Consumer
 
 class ChosenFragmentVM: ViewModel() {
     private val repository = RetrofitRepository()
-    private val movie: MutableLiveData<Response<ChosenMovieModel>> = MutableLiveData()
+    val movie: MutableLiveData<ChosenMovieModel> = MutableLiveData()
     val chosenMovie: MutableLiveData<MovieItemModel> = MutableLiveData()
 
-    fun getData(): LiveData<Response<ChosenMovieModel>> {
+    fun getData(): LiveData<ChosenMovieModel> {
         return movie
     }
 
-    fun getMovie(){
-        viewModelScope.launch {
-            movie.value = repository.getMovie()
-        }
+    fun getMovie(consumer: Consumer<ChosenMovieModel>){
+        val id = "${chosenMovie.value?.id}"
+        repository.getMovie(id, consumer)
     }
 }

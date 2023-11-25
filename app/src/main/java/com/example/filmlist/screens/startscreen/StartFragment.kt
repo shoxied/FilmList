@@ -59,7 +59,7 @@ class StartFragment : Fragment() {
         fun clickMovie(model: MovieItemModel){
             val bundle = Bundle()
             bundle.putSerializable("movie", model)
-            MAINACT.navController.navigate(R.id.action_startFragment_to_chosenFragment)
+            MAINACT.navController.navigate(R.id.action_startFragment_to_chosenFragment, bundle)
         }
     }
 

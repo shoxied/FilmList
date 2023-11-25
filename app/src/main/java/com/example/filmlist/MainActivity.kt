@@ -2,6 +2,7 @@ package com.example.filmlist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.filmlist.databinding.ActivityMainBinding
